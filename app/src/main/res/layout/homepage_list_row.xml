@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/list_row_layout">
+
+    <TextView
+        android:id="@+id/timeperiodId"
+        android:layout_width="0dp"
+        android:text="9 am-10 am"
+        android:textSize="20sp"
+
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/subjectId"
+        android:layout_width="0dp"
+        android:text="Software Engineering"
+
+        android:layout_gravity="center_vertical"
+        android:textSize="20sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/roomNoId"
+        android:layout_width="0dp"
+        android:text="E-601"
+
+        android:layout_gravity="center_vertical"
+        android:textSize="20sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SchedulerApp</string>
+    <string-array name="TimePeriod">
+        <item>9 am-10 am</item>
+        <item>10 am-11 am</item>
+        <item>11 am-1 pm</item>
+        <item>2 pm-3 pm</item>
+        <item>3 pm-4 pm</item>
+        <item>4 pm-5 pm</item>
+    </string-array>
+    <string-array name="Subjects">
+        <item>Software Engineering</item>
+        <item>AI</item>
+        <item>ACN</item>
+        <item>FEDT</item>
+        <item>Algorithms</item>
+        <item>Data Structure</item>
+    </string-array>
+    <string-array name="RoomNumber">
+        <item>E-403</item>
+        <item>D-315</item>
+        <item>C-405</item>
+        <item>E-601</item>
+        <item>D-317</item>
+        <item>E-601</item>
+    </string-array>
+</resources>
