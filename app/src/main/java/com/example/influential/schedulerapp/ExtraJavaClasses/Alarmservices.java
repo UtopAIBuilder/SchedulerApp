@@ -89,7 +89,7 @@ Log.d("Bz","Entered alarmCal");
             cal.set(Calendar.DATE, date + 1);
         }
 
-       i = cal.get(Calendar.DAY_OF_WEEK) - 1; // day 1 is sunday while in database day 1 is monday
+           i = cal.get(Calendar.DAY_OF_WEEK) - 1; // day 1 is sunday while in database day 1 is monday
 
 
              Log.d("Bz","I:"+i);
@@ -126,7 +126,7 @@ Log.d("Bz","Entered alarmCal");
 
     }
 
-
+// initializes startHour array with the working day schedule
   private void rowEvaluation(String jsonRespo) {
         JSONArray rows;
          k=0;
@@ -196,7 +196,7 @@ Log.d("Bz","Entered alarmCal");
     {
         int j;
         Log.d("Bz","Visiting for startHourAss");
-        for (j = 0; j < 3; j++) {
+        for (j = 0; j < k; j++) {
             cal.set(Calendar.HOUR_OF_DAY, startHour[j]);
 
             long temp = cal.getTimeInMillis();
