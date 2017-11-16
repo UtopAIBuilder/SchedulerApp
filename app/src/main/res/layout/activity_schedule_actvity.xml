@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.influential.schedulerapp.Fragments.ScheduleFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="2dp"
+
+        tools:context="com.example.influential.schedulerapp.MainActivity">
+
+        <LinearLayout
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:background="#d3d3d3"
+            android:layout_height="55dp">
+            <TextView
+
+                android:layout_width="0dp"
+                android:text="ClassTime"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+
+                android:layout_width="0dp"
+                android:text="Subjects"
+                android:textColor="#000"
+                android:layout_gravity="center_vertical"
+                android:textSize="22sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+
+                android:layout_width="0dp"
+                android:text="RoomNo"
+                android:textColor="#000"
+                android:layout_gravity="center_vertical"
+                android:textSize="22sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timetable_list"></ListView>
+
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ggsipu_icon"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/NaviGatorBtn"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:id="@+id/progresso"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Check Attendance"
+        android:textColor="#fff"
+        android:id="@+id/NaviGatorBtn"
+        android:textSize="17sp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+
+        />
+
+</RelativeLayout>

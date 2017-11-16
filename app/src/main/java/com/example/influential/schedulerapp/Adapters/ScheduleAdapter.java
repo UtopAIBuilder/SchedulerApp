@@ -1,4 +1,4 @@
-package com.example.influential.schedulerapp.com.example.influential.Adapters;
+package com.example.influential.schedulerapp.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,23 +13,25 @@ import com.example.influential.schedulerapp.R;
  * Created by bazil on 8/10/17.
  */
 
-public class HomepageListAdapter extends BaseAdapter {
+public class ScheduleAdapter extends BaseAdapter {
     Context context;
-    String[] timePeriod;
-    String[] subjects;
-    String[] roomNo;
+    private String[] timePeriod;
+    private String[] subjects;
+    private String[] roomNo;
+    private int count=0;
 
-    public HomepageListAdapter(Context context, String[] timePeriod, String[] subjects, String[] roomNo) {
+    public ScheduleAdapter(Context context, String[] timePeriod, String[] subjects, String[] roomNo,int count) {
         this.context = context;
         this.timePeriod = timePeriod;
         this.subjects = subjects;
         this.roomNo = roomNo;
+        this.count=count;
     }
 
     @Override
     public int getCount() {
 
-        return timePeriod.length;
+        return count;
     }
 
     @Override
@@ -59,9 +61,9 @@ public class HomepageListAdapter extends BaseAdapter {
             row=convertView;
         }
 
-        TextView timeTxt=row.findViewById(R.id.timeperiodId);
-        TextView subjectTxt=row.findViewById(R.id.subjectId);
-        TextView roomTxt=row.findViewById(R.id.roomNoId);
+        TextView timeTxt= (TextView) row.findViewById(R.id.timeperiodId);
+        TextView subjectTxt= (TextView) row.findViewById(R.id.subjectId);
+        TextView roomTxt= (TextView) row.findViewById(R.id.roomNoId);
 
         timeTxt.setText(timePeriod[i]);
         subjectTxt.setText(subjects[i]);

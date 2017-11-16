@@ -1,84 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
 
-    tools:context="com.example.influential.schedulerapp.MainActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
     android:orientation="vertical"
-    android:paddingTop="2dp"
-
-    tools:context="com.example.influential.schedulerapp.MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    >
 
     <LinearLayout
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:background="#d3d3d3"
-        android:layout_height="55dp">
-        <TextView
-            android:id="@+id/timeperiodId"
-            android:layout_width="0dp"
-            android:text="ClassTime"
-            android:textSize="22sp"
-            android:textColor="#000"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/subjectId"
-            android:layout_width="0dp"
-            android:text="Subjects"
-            android:textColor="#000"
-             android:layout_gravity="center_vertical"
-            android:textSize="22sp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/roomNoId"
-            android:layout_width="0dp"
-            android:text="RoomNo"
-            android:textColor="#000"
-            android:layout_gravity="center_vertical"
-            android:textSize="22sp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/my_toolbar"
+            />
+        <FrameLayout
+
+            android:id="@+id/main_frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 
-   <ListView
-       android:paddingStart="5dp"
-       android:paddingEnd="5dp"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:id="@+id/timetable_list"></ListView>
 
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/ggsipu_icon"
-        android:layout_gravity="center_horizontal"/>
-
-</LinearLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Next Day Schedule"
-        android:textColor="#fff"
-        android:textSize="17sp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
-
-        />
-    </RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_menu" />
+</android.support.v4.widget.DrawerLayout>

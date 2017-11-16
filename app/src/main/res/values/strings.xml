@@ -24,4 +24,36 @@
         <item>D-317</item>
         <item>E-601</item>
     </string-array>
+
+    <string-array name="Proffs">
+        <item>Prof Bharti</item>
+        <item>Prof Amit P Singh</item>
+        <item>Prof Dr. M Bala Krishna</item>
+        <item>Sh. Rahul Johari</item>
+        <item>Dr. Rinkaj Goyal</item>
+        <item>Prof Syed</item>
+    </string-array>
+
+    <string-array name="Attendance">
+        <item>40</item>
+        <item>72</item>
+        <item>65</item>
+        <item>67</item>
+        <item>78</item>
+        <item>85</item>
+    </string-array>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="try_again">Try Again</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome</string>
+    <string name="week_days">Day schedule</string>
+    <string name="mon">Monday</string>
+    <string name="tue">Tuesday</string>
+    <string name="wed">Wednesday</string>
+    <string name="thu">Thursday</string>
+    <string name="fri">Friday</string>
+    <string name="drawer_open">when drawer is open</string>
+    <string name="drawer_close">when drawer is closed</string>
+    <string name="Notif">Notification</string>
 </resources>
