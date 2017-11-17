@@ -201,7 +201,7 @@ Log.d("Bz","Entered alarmCal");
 
             long temp = cal.getTimeInMillis();
             temp = temp - System.currentTimeMillis();
-            if (temp>0) {
+            if (temp>600000) {
                 temp=temp-600000;
                 Log.d("Bz", "startHour: " + startHour[j]);
                 SharedPreferences sharedPreferences = context.getSharedPreferences("NotificationFile", Context.MODE_PRIVATE);

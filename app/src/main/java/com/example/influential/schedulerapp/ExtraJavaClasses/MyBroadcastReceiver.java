@@ -54,7 +54,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     {
         // gets subject from shared preferences to be shown in notification
 
-        SharedPreferences sharedPreferences=context.getSharedPreferences("notifFile",Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences=context.getSharedPreferences("NotificationFile",Context.MODE_PRIVATE);
         subject=sharedPreferences.getString("Subject","NA");
         return subject;
     }
@@ -62,7 +62,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     {
        // the room No from shared preferences to be shown in notification
 
-        SharedPreferences sharedPreferences=context.getSharedPreferences("notifFile",Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences=context.getSharedPreferences("NotificationFile",Context.MODE_PRIVATE);
         roomNO=sharedPreferences.getString("RoomNo","NA");
         return roomNO;
     }
