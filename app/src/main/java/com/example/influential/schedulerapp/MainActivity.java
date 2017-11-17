@@ -1,6 +1,7 @@
 package com.example.influential.schedulerapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -193,7 +194,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     break;
                 case R.id.notif:
-
+                    Intent intent=new Intent(this, NotificationView.class);
+                    startActivity(intent);
                     break;
 
                 default:

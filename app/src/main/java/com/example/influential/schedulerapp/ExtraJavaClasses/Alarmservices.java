@@ -95,10 +95,12 @@ Log.d("Bz","Entered alarmCal");
              Log.d("Bz","I:"+i);
           rowEvaluation(jsonresponse);
           int forReturnValue=startHourAssignmentForNextDay();
+      Log.d("Bz","return value:"+forReturnValue);
 
         if (forReturnValue == k) {
             // return value== k means there is no class for today at present hour
-            if (i== 6) {
+            if (i== 5) {
+                Log.d("Bz","it's friday bitch");
                 //if it's friday post for monday. i.e., 3 days later
                 cal.set(Calendar.DATE, date + 3);
                 //i== row to be invoked from database
@@ -122,7 +124,7 @@ Log.d("Bz","Entered alarmCal");
 
 
 
-      Log.d("Bz","return value:"+forReturnValue);
+
 
     }
 
@@ -195,12 +197,14 @@ Log.d("Bz","Entered alarmCal");
     private int startHourAssignmentForNextDay()
     {
         int j;
+
         Log.d("Bz","Visiting for startHourAss");
         for (j = 0; j < k; j++) {
             cal.set(Calendar.HOUR_OF_DAY, startHour[j]);
 
             long temp = cal.getTimeInMillis();
             temp = temp - System.currentTimeMillis();
+            //push notifications 10 min before
             if (temp>600000) {
                 temp=temp-600000;
                 Log.d("Bz", "startHour: " + startHour[j]);
@@ -208,7 +212,7 @@ Log.d("Bz","Entered alarmCal");
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("Subject", subjectstemp[j]);
                 editor.putString("RoomNo", roomNotemp[j]);
-                editor.commit();
+                editor.apply();
                 setAlarmMan(temp);
                 break;
             }

@@ -30,7 +30,7 @@
                     android:title="@string/fri"/>
                 <item
                     android:id="@+id/notif"
-                    android:title="@string/Notif"
+                    android:title="@string/mark_attendance"
                     />
 
 

@@ -2,14 +2,17 @@ package com.example.influential.schedulerapp.ExtraJavaClasses;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
+
+import com.example.influential.schedulerapp.NotificationView;
 import com.example.influential.schedulerapp.R;
 
-import java.util.Calendar;
+
 
 /**
  * Created by bazil on 23/10/17.
@@ -40,12 +43,19 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
         // this pushes a notification immediately after being called
         // also sets the next alarm by calling alarmCal()
 
-        int notifCount=0;
+        Intent intent=new Intent(context, NotificationView.class);
+
+        PendingIntent pIntent = PendingIntent.getActivity(context, 0, intent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
         NotificationManager NM= (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         Notification notified= new Notification.Builder
-                (context).setContentTitle(getSubjectNotif()).setContentText("will you plz get to this room: "+getRoomNotif())
-                .setSmallIcon(R.drawable.schecon).build();
-        NM.notify(notifCount,notified);
+                (context).setContentTitle(getSubjectNotif())
+                .setContentText("will you plz get to this room: "+getRoomNotif())
+                .setSmallIcon(R.drawable.schecon)
+                .setContentIntent(pIntent)
+                .build();
+        NM.notify(0,notified);
         new Alarmservices(context).alarmCal(jsonResponseTemp);
     }
 

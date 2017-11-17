@@ -56,4 +56,8 @@
     <string name="drawer_open">when drawer is open</string>
     <string name="drawer_close">when drawer is closed</string>
     <string name="Notif">Notification</string>
+    <string name="title_activity_notification_view">NotificationView</string>
+    <string name="mark_your_attendance">Mark Your Attendance</string>
+    <string name="submit">Submit</string>
+    <string name="mark_attendance">Mark Attendance</string>
 </resources>
